@@ -1,1 +1,0 @@
-import{g as e,j as r,k as a}from"./chunk-BD7K35BI.js";e();r();a();var n={cancel:"general/cancel",save:"general/save",error:"general/error",reload:"general/reload",loading:"general/loading"},c={title:"home/title",project:"home/project",start:"home/start"};export{n as a,c as b};
