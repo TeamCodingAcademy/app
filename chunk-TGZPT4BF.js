@@ -1,0 +1,1 @@
+import{f as o}from"./chunk-XTCRJIG3.js";import{g as r,j as s,k as a}from"./chunk-BD7K35BI.js";r();s();a();var d=({courses:e})=>e,l=e=>o(d,({courses:t})=>t[e]||null),T=e=>o(d,({courses:t})=>Object.values(t).reduce((n,u)=>n||u.tasks.find(c=>c.id===e),void 0));export{l as a,T as b};
