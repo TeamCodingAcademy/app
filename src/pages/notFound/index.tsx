@@ -1,9 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import { Container } from './notFound.styled';
+import { Routes } from '~/app/routes';
 
 const notFound: React.FC = () => (
-  <div className="no-match">
+  <Container>
     <h1>404</h1>
-  </div>
+    <h3>Unfortunately, we have not found the page.</h3>
+    <Link to={Routes.home}>
+      <Button variant="contained" size="large">
+        Home page
+      </Button>
+    </Link>
+  </Container>
 );
 
 export default notFound;

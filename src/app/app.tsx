@@ -16,7 +16,7 @@ export const App: React.FunctionComponent = () => {
   return (
     <Container>
       <Switch>
-        <Route path={Routes.home} component={withSuspense(Home)} />
+        <Route path={Routes.home} exact component={withSuspense(Home)} />
 
         {/* 404 Handler must come last */}
         <Route path="*" component={NotFound} />

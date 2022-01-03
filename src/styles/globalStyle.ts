@@ -8,6 +8,10 @@ export default createGlobalStyle`
         min-height: 100vh;
         font-family: ${Fonts.primaryRegular};
     }
+    
+    a {
+      text-decoration: none;
+    }
 
     @media only screen and (min-device-width: 1024px) {
         html {
