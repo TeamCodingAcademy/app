@@ -1,7 +1,7 @@
 const fallbackFonts = ['sans-serif'];
 
 export default {
-  primaryRegular: `"${fallbackFonts.join(', ')}`,
-  primaryMedium: `"${fallbackFonts.join(', ')}`,
-  primaryBold: `"${fallbackFonts.join(', ')}`,
+  primaryRegular: `Roboto, ${fallbackFonts.join(', ')}`,
+  primaryMedium: `Roboto, ${fallbackFonts.join(', ')}`,
+  primaryBold: `Roboto, ${fallbackFonts.join(', ')}`,
 };

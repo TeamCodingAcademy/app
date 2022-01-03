@@ -5,9 +5,13 @@
 export const general = {
   cancel: 'general/cancel',
   save: 'general/save',
+  error: 'general/error',
+  reload: 'general/reload',
   loading: 'general/loading',
 };
 
-export const hero = {
-  title: 'hero/title',
+export const home = {
+  title: 'home/title',
+  project: 'home/project',
+  start: 'home/start',
 };

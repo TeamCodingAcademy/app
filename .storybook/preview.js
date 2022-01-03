@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { addDecorator } from '@storybook/react';
 
 import { createi18n } from '../src/i18n';
+import GlobalStyles from '../src/styles/globalStyle';
 
 const Margin = styled.div`
   margin: 20px;
@@ -10,4 +11,9 @@ const Margin = styled.div`
 
 createi18n('en');
 
-addDecorator(storyFn => <Margin>{storyFn()}</Margin>);
+addDecorator(storyFn => (
+  <>
+    <GlobalStyles />
+    <Margin>{storyFn()}</Margin>
+  </>
+));

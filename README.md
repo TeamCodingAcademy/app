@@ -1,1 +1,7 @@
-# Template for React App
+# Website of the Team Coding Academy
+
+### How to run
+
+```
+npm run dev
+```

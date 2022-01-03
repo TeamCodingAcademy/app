@@ -3,12 +3,14 @@ import { render, RenderOptions, queries, screen, BoundFunctions } from '@testing
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { MemoryRouter, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
 
 import '@testing-library/jest-dom';
 
 import createTestStore from './createTestStore';
 import history from '~/app/history';
 import { customQueries } from './queries';
+import { theme } from '~/styles/theme';
 
 type OptionsType = RenderOptions & {
   initialState?: any;
@@ -19,7 +21,9 @@ const AllTheProviders: (storeInitialState?: any) => React.FC<{ children?: React.
   ({ children }) => {
     return (
       <Provider store={createTestStore(storeInitialState)}>
-        <ConnectedRouter history={history}>{children}</ConnectedRouter>
+        <ConnectedRouter history={history}>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </ConnectedRouter>
       </Provider>
     );
   };
