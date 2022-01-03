@@ -16,7 +16,7 @@
     "build-storybook": "build-storybook",
     "generate-locales": "node src/locales/generateLocales.js && eslint \"src/locales/localeKeys.ts\" --fix --quiet",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Iryna Lian",
   "homepage": "http://TeamCodingAcademy.github.io/app",
