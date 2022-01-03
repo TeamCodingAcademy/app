@@ -7,6 +7,7 @@ import { useLocation } from 'react-router';
 import { Container, TasksContainer, Description, Title } from './course.styled';
 import { getCourse } from '~/redux/courses/selectors';
 import ListItem from '~/components/listItem';
+import { path } from '~/utils';
 
 const Course = () => {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ const Course = () => {
         <Title>{t(title)}</Title>
         <Description>{t(description)}</Description>
         {tasks.map(task => (
-          <Link to={`/task/${task.id}`}>
+          <Link to={path(`/task/${task.id}`)}>
             <ListItem task={task} key={task.id} />
           </Link>
         ))}

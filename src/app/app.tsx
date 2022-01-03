@@ -11,13 +11,11 @@ import withSuspense from '~/hoc/withSuspense';
 import NotFound from '~/pages/notFound';
 
 // Utils
-import { SUB_DIRECTORY } from '~/config';
+import { path } from '~/utils';
 
 const Home = lazy(() => import('../pages/home'));
 const Course = lazy(() => import('../pages/course'));
 const Task = lazy(() => import('../pages/task'));
-
-const path = (p: string) => SUB_DIRECTORY + p;
 
 export const App: React.FunctionComponent = () => {
   return (
