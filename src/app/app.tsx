@@ -14,6 +14,7 @@ import NotFound from '~/pages/notFound';
 import { SUB_DIRECTORY } from '~/config';
 
 const Home = lazy(() => import('../pages/home'));
+const Course = lazy(() => import('../pages/course'));
 
 const path = (p: string) => SUB_DIRECTORY + p;
 
@@ -22,6 +23,7 @@ export const App: React.FunctionComponent = () => {
     <Container>
       <Switch>
         <Route path={path(Routes.home)} exact component={withSuspense(Home)} />
+        <Route path={path(Routes.course)} exact component={withSuspense(Course)} />
 
         {/* 404 Handler must come last */}
         <Route path="*" component={NotFound} />

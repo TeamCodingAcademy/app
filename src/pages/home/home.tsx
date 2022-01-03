@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import Button from '@mui/material/Button';
 import { Container, Title, DescriptionContainer, TitleContainer, Mark } from './home.styled';
@@ -14,9 +15,11 @@ const Home = () => {
           <Title>{t(Locale.home.title)}</Title>
           <Mark>{t(Locale.home.project)} |</Mark>
         </TitleContainer>
-        <Button variant="contained" size="large">
-          {t(Locale.home.start)}
-        </Button>
+        <Link to="/course/1">
+          <Button variant="contained" size="large">
+            {t(Locale.home.start)}
+          </Button>
+        </Link>
       </DescriptionContainer>
     </Container>
   );

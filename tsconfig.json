@@ -56,6 +56,7 @@
         // "typeRoots": [],                       /* List of folders to include type definitions from. */
         "types": [
             "./src/models",
+            "./src/models/course",
             "node",
             "jest"
         ],
