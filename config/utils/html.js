@@ -1,5 +1,6 @@
 const path = require('path');
 const { readFilePromisified, writeFilePromisified } = require('./file');
+const SUB_DIRECTORY = '/app';
 
 const getReplaceMethod = type => {
   const map = {
@@ -12,7 +13,7 @@ const getReplaceMethod = type => {
 const replaceJS = (text, hashFile) => {
   return text.replace(
     `<script src="/index.js" type="module"></script>`,
-    `<script src="/${hashFile}" type="module"></script>`,
+    `<script src="${SUB_DIRECTORY}/${hashFile}" type="module"></script>`,
   );
 };
 

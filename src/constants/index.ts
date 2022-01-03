@@ -1,1 +1,1 @@
-export const EMPTY_VALUE = '--';
+export * from './constants';

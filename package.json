@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "./scripts/dev.sh",
-    "build": "./scripts/build.sh",
+    "build": "SUB_DIRECTORY=/app ./scripts/build.sh",
     "build:analyze": "./scripts/build.sh --verbose ; esbuild-visualizer --metadata ./meta.json",
     "check-types": "npx tsc --noEmit",
     "test": "npx jest",
