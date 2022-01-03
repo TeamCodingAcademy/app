@@ -1,4 +1,4 @@
-import{b as m}from"./chunk-TYCD7JQ2.js";import{$ as d,Z as a,_ as p,e as c,g as o,i as n,j as r,l as s}from"./chunk-7M2SBBEZ.js";o();n();r();var i;(function(t){t.home="/",t.course="/course/:id",t.task="/task/:id"})(i||(i={}));o();n();r();var e=c(s());o();n();r();var u=a.div`
+import{b as m}from"./chunk-R44BWABR.js";import{$ as d,Z as a,_ as p,e as c,g as o,i as n,j as r,l as s}from"./chunk-VVVVV7MP.js";o();n();r();var i;(function(t){t.home="/",t.course="/course/:id",t.task="/task/:id"})(i||(i={}));o();n();r();var e=c(s());o();n();r();var u=a.div`
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
