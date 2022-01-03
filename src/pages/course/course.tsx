@@ -3,13 +3,15 @@ import { useTranslation } from 'react-i18next';
 
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import { Container, TasksContainer, Description, Title } from './course.styled';
 import { getCourse } from '~/redux/courses/selectors';
-import Task from '~/components/task';
+import ListItem from '~/components/listItem';
 
 const Course = () => {
   const { t } = useTranslation();
-  const id = '1';
+  const { pathname } = useLocation();
+  const id = pathname.substring(pathname.lastIndexOf('/') + 1);
   const { title, description, tasks } = useSelector(getCourse(id));
   return (
     <Container>
@@ -17,8 +19,8 @@ const Course = () => {
         <Title>{t(title)}</Title>
         <Description>{t(description)}</Description>
         {tasks.map(task => (
-          <Link to={`/course/${id}/${task.id}`}>
-            <Task task={task} key={task.id} />
+          <Link to={`/task/${task.id}`}>
+            <ListItem task={task} key={task.id} />
           </Link>
         ))}
       </TasksContainer>

@@ -2,13 +2,13 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Paper from '@mui/material/Paper';
-import { Container, Title } from './task.styled';
+import { Container, Title } from './listItem.styled';
 
 type Props = {
   task: Models.Task;
 };
 
-const Task: React.FC<Props> = ({ task }) => {
+const ListItem: React.FC<Props> = ({ task }) => {
   const { t } = useTranslation();
   return (
     <Paper elevation={3}>
@@ -19,4 +19,4 @@ const Task: React.FC<Props> = ({ task }) => {
   );
 };
 
-export default Task;
+export default ListItem;

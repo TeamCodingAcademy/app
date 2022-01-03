@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { Container } from './notFound.styled';
 import { Routes } from '~/app/routes';
 
-const notFound: React.FC = () => (
+const NotFound: React.FC = () => (
   <Container>
     <h1>404</h1>
     <h3>Unfortunately, we have not found the page.</h3>
@@ -16,4 +16,4 @@ const notFound: React.FC = () => (
   </Container>
 );
 
-export default notFound;
+export default NotFound;

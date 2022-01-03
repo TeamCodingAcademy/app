@@ -15,6 +15,7 @@ import { SUB_DIRECTORY } from '~/config';
 
 const Home = lazy(() => import('../pages/home'));
 const Course = lazy(() => import('../pages/course'));
+const Task = lazy(() => import('../pages/task'));
 
 const path = (p: string) => SUB_DIRECTORY + p;
 
@@ -24,6 +25,7 @@ export const App: React.FunctionComponent = () => {
       <Switch>
         <Route path={path(Routes.home)} exact component={withSuspense(Home)} />
         <Route path={path(Routes.course)} exact component={withSuspense(Course)} />
+        <Route path={path(Routes.task)} exact component={withSuspense(Task)} />
 
         {/* 404 Handler must come last */}
         <Route path="*" component={NotFound} />
