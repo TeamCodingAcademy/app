@@ -5,8 +5,6 @@ import laptop from '../../images/laptop.jpg';
 export const Container = styled.div`
   background: center no-repeat url(${laptop});
   background-size: cover;
-  min-width: 100vw;
-  min-height: 100vh;
   display: flex;
 `;
 

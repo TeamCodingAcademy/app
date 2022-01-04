@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router';
-import { Container, TasksContainer, Description, Title } from './course.styled';
+import { Container, TasksContainer, Description, Title, DescriptionContainer } from './course.styled';
 import { getCourse } from '~/redux/courses/selectors';
 import ListItem from '~/components/listItem';
 import { path } from '~/utils';
@@ -17,14 +17,16 @@ const Course = () => {
   return (
     <Container>
       <TasksContainer>
-        <Title>{t(title)}</Title>
-        <Description>{t(description)}</Description>
         {tasks.map(task => (
           <Link to={path(`/task/${task.id}`)}>
             <ListItem task={task} key={task.id} />
           </Link>
         ))}
       </TasksContainer>
+      <DescriptionContainer>
+        <Title>{t(title)}</Title>
+        <Description>{t(description)}</Description>
+      </DescriptionContainer>
     </Container>
   );
 };

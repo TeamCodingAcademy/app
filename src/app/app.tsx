@@ -9,6 +9,7 @@ import { Routes } from '~/app/routes';
 // Pages
 import withSuspense from '~/hoc/withSuspense';
 import NotFound from '~/pages/notFound';
+import NavBar from '~/components/navBar';
 
 // Utils
 import { path } from '~/utils';
@@ -20,6 +21,7 @@ const Task = lazy(() => import('../pages/task'));
 export const App: React.FunctionComponent = () => {
   return (
     <Container>
+      <NavBar />
       <Switch>
         <Route path={path(Routes.home)} exact component={withSuspense(Home)} />
         <Route path={path(Routes.course)} exact component={withSuspense(Course)} />
