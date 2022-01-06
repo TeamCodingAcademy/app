@@ -15,3 +15,10 @@ export const home = {
   project: 'home/project',
   start: 'home/start',
 };
+
+export const task = {
+  requirements: 'task/requirements',
+  hints: 'task/hints',
+  example: 'task/example',
+  links: 'task/links',
+};

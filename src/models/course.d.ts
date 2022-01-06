@@ -11,5 +11,7 @@ declare namespace Models {
     title: string;
     description: string;
     criteria: string[];
+    sandbox?: string;
+    usefulLinks?: string[];
   }
 }
