@@ -32,13 +32,16 @@ const Task = () => {
   };
 
   const { title, description, criteria, sandbox, usefulLinks } = task;
+
+  const showHints = !!usefulLinks?.length;
+
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
             <Tab label={t(Locale.task.requirements)} value="1" />
-            <Tab label={t(Locale.task.hints)} value="2" />
+            {showHints && <Tab label={t(Locale.task.hints)} value="2" />}
             {sandbox && <Tab label={t(Locale.task.example)} value="3" />}
           </TabList>
         </Box>

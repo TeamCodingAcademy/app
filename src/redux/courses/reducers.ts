@@ -9,14 +9,15 @@ export const initialState: CoursesState = {
   courses: {
     1: {
       id: '1',
-      title: 'Online Forum like Reddit',
+      title: 'Online Blog with comments',
       description:
         'This is a front-end course that will help you to create React SPA (single-page application) from scratch. At the end you will have your own working forum website in your portfolio.',
       tasks: [
         {
           id: '1',
           title: 'Initial setup of the project',
-          description: 'The goal is to create a repository with the code template that works locally.',
+          description:
+            'The goal is to create a repository with the code template that works locally. For the simplicity you can just create a new sandbox in any online editor like CodeSandbox and do not mess with Git.',
           criteria: [
             'New repository is created in your Git account',
             'SSH key is used for connection to Git account',
@@ -26,7 +27,7 @@ export const initialState: CoursesState = {
           sandbox: 'weathered-sunset-b5qps',
         },
         {
-          id: '11',
+          id: '2',
           title: 'Install Material UI library',
           description:
             'Now you need to choose how you are going to style your components. You may choose any options. In order to make the task simpler we will use the library with the components.',
@@ -37,7 +38,7 @@ export const initialState: CoursesState = {
           usefulLinks: ['https://mui.com/getting-started/installation/'],
         },
         {
-          id: '2',
+          id: '3',
           title: 'Create header for your website',
           description: 'The goal is to create your first component and implement first styling.',
           criteria: [
@@ -50,7 +51,7 @@ export const initialState: CoursesState = {
           usefulLinks: ['https://mui.com/components/app-bar/'],
         },
         {
-          id: '21',
+          id: '4',
           title: 'Create theming',
           description: 'Add colors and fonts for styling the components according to design',
           criteria: [
@@ -65,7 +66,7 @@ export const initialState: CoursesState = {
           ],
         },
         {
-          id: '3',
+          id: '5',
           title: 'Display the author data',
           description: 'Add a card with some text and a photo instead of the boilerplate React text',
           criteria: [
@@ -76,15 +77,69 @@ export const initialState: CoursesState = {
           usefulLinks: ['https://mui.com/components/cards/'],
         },
         {
-          id: '4',
-          title: 'Display the posts',
-          description: 'Now you can make the first API request and show the list of posts.',
+          id: '6',
+          title: 'Fetch the posts',
+          description:
+            'Now you can make the first API request. For now it is fake data, but if you want you may use your API or local data as well to show your own posts.',
           criteria: [
-            'Several components have been created: the main page which fetches posts and is connect to the router, List and Post components',
-            'The posts are fetched from the server',
-            'The posts are displayed on http://localhost:3000/',
-            'For each post the title, short preview (part of the text), date and author should be displayed',
+            'The separate Posts component is created',
+            'Each time this component is mounted, the list of the posts is fetched from API (GET https://jsonplaceholder.typicode.com/posts)',
+            'The posts are displayed in console and stored in the state',
+            'The typing for the object received is created',
           ],
+          sandbox: 'snowy-meadow-77tox',
+          usefulLinks: [
+            'https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch',
+            'https://www.typescriptlang.org/docs/handbook/namespaces.html',
+            'https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html',
+          ],
+        },
+        {
+          id: '7',
+          title: 'Display the posts',
+          description: 'Create a component for a post and show the list of posts.',
+          criteria: [
+            'The posts are displayed on http://localhost:3000/ under the Author info',
+            'Each post contains the title, text and Read More button',
+            'The posts are aligned nicely no matter what screen size is',
+          ],
+          sandbox: 'jovial-sound-bcbbs',
+        },
+        {
+          id: '8',
+          title: 'Show loading progress',
+          description: 'While the server request is being processing, the user should see the progress.',
+          criteria: [
+            'Show loading spinner during the fetching',
+            'Spinner should be hidden as soon as result is available',
+            'Show error if it is a case',
+          ],
+          sandbox: 'lucid-austin-cdknr',
+          usefulLinks: [
+            'https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally',
+            'https://mui.com/components/progress/',
+          ],
+        },
+        {
+          id: '9',
+          title: 'Add posts splitting',
+          description:
+            "Since the server returns all posts at once we can use it and create pagination locally. So we can determine how many posts we want to display at one time (let's say 20), remember what page is displayed and show only this part.",
+          criteria: [
+            'Store all of the posts in the state',
+            'Store the current page number (only the first page for now)',
+            'Show the posts relying on the current page number',
+          ],
+          sandbox: 'quirky-cdn-hsjss',
+          usefulLinks: ['https://en.wikipedia.org/wiki/Pagination'],
+        },
+        {
+          id: '10',
+          title: 'Add pagination',
+          description: 'Use the logic from the previous task and add buttons to control the page displayed',
+          criteria: ['User can click and display the next and previous pages with posts'],
+          sandbox: 'elegant-leakey-uowcq',
+          usefulLinks: ['https://mui.com/components/pagination/'],
         },
       ],
     },
