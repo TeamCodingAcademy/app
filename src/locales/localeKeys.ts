@@ -14,6 +14,7 @@ export const home = {
   title: 'home/title',
   project: 'home/project',
   start: 'home/start',
+  howWorks: 'home/howWorks',
 };
 
 export const course = {
