@@ -3,6 +3,7 @@ declare namespace Models {
     id: string;
     title: string;
     description: string;
+    link: string;
     tasks: Task[];
   }
 

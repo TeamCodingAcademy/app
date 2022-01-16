@@ -12,6 +12,7 @@ export const initialState: CoursesState = {
       title: 'Online Blog with comments',
       description:
         'This is a front-end course that will help you to create React SPA (single-page application) from scratch. At the end you will have your own working forum website in your portfolio.',
+      link: 'https://uowcq.csb.app/',
       tasks: [
         {
           id: '1',

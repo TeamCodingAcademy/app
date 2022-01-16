@@ -16,6 +16,10 @@ export const home = {
   start: 'home/start',
 };
 
+export const course = {
+  viewExample: 'course/viewExample',
+};
+
 export const task = {
   requirements: 'task/requirements',
   hints: 'task/hints',
